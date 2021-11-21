@@ -1,0 +1,201 @@
+body {
+		padding:0;
+		margin: 0;
+		box-sizing:border-box;
+		background:#DDDDDD;
+		font-family: 'Ubuntu', sans-serif;
+		animation: openingEffect 0.5s;
+}
+/* header */
+.page-header {
+		position:fixed;
+		top:0;
+		left:5%;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		width: 90vw;
+		padding:10px;
+		background:#ffffff;
+		border-radius: 0px 0px 5px 5px;
+		box-shadow: 0 1px 4px #4f4f4f;
+		z-index:3;
+}
+.page-header a {
+		display:inline-block;
+		text-decoration: none;
+		padding:10px;		
+		border-radius: 5px;
+		transition: all 0.5s;
+		cursor: pointer;
+}
+.page-header i {
+		color: #2d2d2d;
+		font-size:1.5em;
+		margin:10px;
+}
+.page-header h2 {
+		flex:2;
+		text-align: center;
+		font-weight: 600;
+}
+.page-header h2 span {
+		color: #D65A31;
+}
+.page-header a:hover {
+		background: #e4e4e4;
+		box-shadow:inset 0 0 5px #373737;
+}
+/* Sidebar */
+.sidebar {
+		position: fixed;		
+		top:0;
+		left:-85%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100vh;
+		padding-top: 20px;
+		width:30vw;
+		background: white;
+		box-shadow: 1px 0 5px #2f2f2f;
+		transition: left 0.6s;
+		z-index: 4;
+}																
+.sidebar:target {
+		left:0;
+}
+.sidebar .close {
+		position: absolute;
+		text-decoration: none;
+		top:0;
+		right:0;
+		padding:5px;
+		font-size: 2em;
+		cursor: pointer;
+}
+.sidebar img {
+		width: 60%;
+		height:33%;
+}
+.sidebar .menubtns {
+		display: flex;
+		flex-direction: column;
+		margin: 30px 0 0 0;
+		width: 100%;
+}
+.menubtns a {
+		display:block;
+		width: 100%;
+		text-decoration: none;
+		font-size: 2em;
+		color:#30475E;
+		padding: 10px 0 10px 30%;
+		transition: all 0.5s;
+}
+.menubtns a:hover {
+		background: #30475E;
+		color:#e8e8e8;
+		padding-left: 40%; 
+}
+/* Page Container */
+.page-container {
+		height: 100vh;
+		width:100vw;
+		overflow: hidden;
+}
+.page-container > div {
+   height: 100vh;
+		width: 100vw;
+		overflow: scroll;
+}
+.page-container > div:target {
+		animation: openingEffect 1s;
+}
+
+/* Landing page */
+
+.landing-page {
+		background: transparent;
+}
+.carousel {
+		margin-top: 80px;
+}
+.carousel img {
+		height: 60vh;
+}
+.carousel-caption h3 {
+		font-size: 3em;
+		color:#222831;
+		font-weight: 600;
+		text-shadow: 0 0 5px #e7e7e7;
+}
+.carousel .mask {
+		background: linear-gradient(	 45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%);
+}
+.landing-page h2 {
+		margin: 25px;
+		text-align: center;
+		font-weight: bold;
+}
+.landing-desc {
+		display: flex;
+		gap:15px;
+		box-sizing: border-box;
+		padding: 20px;
+}
+.landing-desc p  {
+   width: 33%;
+	 text-align: left;
+}
+.landing-desc p span {
+   font-size: 1.3rem;
+		font-weight: 600;
+}
+.landing-footer {
+		text-align: center;
+		position: relative;
+		bottom:0;
+		width: 100%;
+		height: 5vh;
+		color: #dddddd;
+		background:#393E46;
+		font-size:0.7em;
+}
+.workout-page {
+		background: green;
+}
+.dietplan-page {
+		background: yellow;
+}
+.BMI-page {
+		background: purple;
+}
+.about-page {
+		background: mintcream;
+}
+
+
+/* Opening animation */
+@keyframes openingEffect {
+		0% {
+				opacity: 0;
+		}
+		100% {
+				opacity: 1;
+		}
+}
+@media (max-width: 720px) {
+		.sidebar {
+				width: 80vw;
+		}
+		.menubtns a{
+				font-size:1.3em;
+		}
+		.landing-desc {
+				flex-direction: column;
+		}
+		.landing-desc p {
+				width: 100%;
+		}
+}
