@@ -8,7 +8,7 @@
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-<!-- MDBootstrap-->
+<!-- Bootstrap-->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet">
 <!-- Custom Css -->
    <link rel="stylesheet" href="style.css">
@@ -16,14 +16,15 @@
 <body>
 		
 		<!-- Contents -->
-		<div class="page-header"> <!-- Header -->
+		<div class="page-header" id="pageHead"> <!-- Header -->
 				<a href="#sidebar" id="menu"><i class="fas fa-bars"></i></a>
 				<h2><span>Workout</span> & Fitness</h2>
-				<a id="night"><i class="fas fa-moon"></i></a>
+				<label for="nmToggle"><a id="night" onclick="nightmode()"><i id="nightmode" class="fas fa-moon"></i></a></label>
 		</div>
+		<input type="checkbox" name="nmToggle" id="nmToggle">
 		<div class="sidebar" id="sidebar"> <!-- sidebar -->
 		   <a href="#" class="close">&times;</a>
-		   <img src="images/assets/Logo.png" alt=""></img>
+		   <img src="images/assets/Logo.png" alt="">
 		   <div class="menubtns">
 		    	<a href="#home">Home</a>
 			  	<a href="#workout">Workouts</a>
@@ -81,33 +82,934 @@
   
   <h2>Services Offered</h2>
   <div class="landing-desc">
-  		<p><span>Workout Guide</span><br><br>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts, healthy recipes and informative articles, as well as one of the most positive communities on the web, you’ll have everything you need to reach your personal fitness goals – for free!</p>
-  		<p><span>Diet plan for free!</span><br><br>Workout and Fitness guide is a freemium website that allows users to get fitness and food advice. It also lets users find out their Body Mass Index, making it an ideal one-stop shop for fitness and dieting. There are also some video tutorials that you can use as part of your workout-routine.</p>
-  		<p><span>BMI Calculator</span><br><br>We also have built in calculator designed to calculate your BMI base on data you will input. Depending on the result we will be recommending a sample diet plan for you!</p>
+  		<p class="pcontainer"><span>Workout Guide</span><br><br>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts, healthy recipes and informative articles, as well as one of the most positive communities on the web, you’ll have everything you need to reach your personal fitness goals – for free!</p>
+  		<p class="pcontainer"><span>Diet plan for free!</span><br><br>Workout and Fitness guide is a freemium website that allows users to get fitness and food advice. It also lets users find out their Body Mass Index, making it an ideal one-stop shop for fitness and dieting. There are also some video tutorials that you can use as part of your workout-routine.</p>
+  		<p class="pcontainer"><span>BMI Calculator</span><br><br>We also have built in calculator designed to calculate your BMI base on data you will input. Depending on the result we will be recommending a sample diet plan for you!</p>
   		</div>
-			<div class="landing-footer">
-					<p>© All Rights Reserve 2021</p>
-			</div>
-				
-				
-				
-				
-				
-				
 				
 				</div> <!-- end of home -->
+				
+				
+				
+				
+				
+				<!-- Workout page -->
 				<div class="workout-page" id="workout">
+						<!-- controls -->
+						<div class="modal-controls">
+								<div class="maleBtn">
+										<h2>Workouts for Male</h2>
+										<a href="#upperM">Upper Body Workout</a>
+										<a href="#lowerM">Lower Body Workout</a>
+										<i class="fas fa-male"></i>
+								</div>
+								<div class="femaleBtn">
+										<h2>Workouts for Female</h2>
+										<a href="#upperF">Upper Body Workout</a>
+										<a href="#lowerF">Lower Body Workout</a>
+										<i class="fas fa-female"></i>
+								</div>
+								
+						</div> <!-- end of buttons -->
+					
+					<!-- Upper -->
+						<div class="workout-modal" id="upperM">
+								<div class="modal-container">
+										<a href="#" class="close">&times;</a>
+										<h2>Upper Body Workout for Male</h2>
+										
+										<!-- arms -->
+										<div class="drop-container">
+												<div class="drop-content">
+														<a class="drop-trigger" data-mdb-toggle="collapse" href="#maleArm">Arm Workouts</a>
+														<div class="hidden-content collapse" id="maleArm">
+																<img src="images/men/upper body/chest/diamond push up.jpg" alt="Sample">
+								<p><span>Diamond Push-ups</span><br><br>With proper form, diamond push-ups activate chest muscles like the pectoralis major,<br>shoulder muscles like the anterior deltoid,and leg muscles like the quadriceps.<br>Diamond push-ups increase core stability and strength.</p>
+								<img src="images/men/upper body/arms/bodyweight.jpg" alt="Sample">
+								<p><span>Bodyweight Triceps Dip</span><br><br>1.Chaturanga Push-Up On Knees. A) Begin in a kneeling plank position with<br>arms directly below shoulders and body in a straight line back to knees.<br>2.Tricep Dip. A) Start seated with knees bent and feet on the floor.<br>3.Tricep Push-Up.<br>4.Army Crawl Push-Up.</p>
+								<img src="images/men/upper body/arms/bodysaw.jpg" alt="Sample">
+								<p><span>Body Saw</span><br><br>Step 1: Assume a standard push-up position with your feet on a pair of Valslides.<br>Step 2: Next, lower yourself down into the bottom portion of the push-up. This is the starting position.<br>Step 3: Begin exercise by sliding your body backward as your arms extend fully. Be sure to keep your body in a straight line and don't allow hips to rise or sag.<br>Step 4: Reverse movement back to starting position. This completes one rep.</p>
+								<img src="images/men/upper body/arms/side plank.jpg" alt="Sample">
+								<p><span>Side Plank</span><br><br>Lie on your side with your knees bent, and prop your upper body up on your elbow. Raise your hips off the floor, and hold for 6 seconds. Rest for 10 seconds. Repeat 3 to 5 times.</p>
+								<img src="images/men/upper body/arms/Forearm Plank.png" alt="Sample">
+								<p><span>Forearm Plank Reach Out</span><br><br>Forearm planks target the transverse abdominis (that pesky ab muscle below your belly button), the rectus abdominis (the large muscle in your midsection), and the internal and external obliques (the side muscles of your abdominal region).</p>
+								<img src="images/men/upper body/arms/Plank up_down.jpg" alt="Sample">
+								<p><span>Plank Up-Down</span><br><br>How many plank ups should I do?<br>As a general guideline, Doug Sklar, a certified personal trainer and founder of PhilanthroFIT in New York City, recommends striving to do three sets of up to 60 seconds. “It's OK to start with shorter sets and work up to 60 seconds,” he says. Plus, shorter planks can still give you a solid workout, Sklar says.</p>
+								<img src="images/men/upper body/arms/Lateral Plank Walk.jpg" alt="Sample">
+								<p><span>Lateral Plank Walk</span><br><br>How do you do a plank walk step by step?<br>Image result for plank walk step<br>Walk your hands forward, moving into a plank, and hold each step to stretch your calves a bit. This warms up the shoulders and hands nicely.<br>Hold the plank for a few seconds to really wake up your core.<br>From your plank, walk your hands back to your feet until you are in another forward bend.</p>
+								<img src="images/men/upper body/arms/Triceps Box Dip.jpg" alt="Sample">
+								<p><span>Triceps Box Dip</span><br><br>Your hands should be shoulder-width apart on the surface you are dipping from, with your arms straight.<br>Squeeze your core and glutes then raise your chin and chest to keep your body tight.<br>From there, start the move by bending your elbows.<br>Dip down until your arms are at a 90-degree angle.</p>
+														</div>
+												</div>
+										</div> <!-- end arms -->
+										
+										<!-- Chest -->
+										<div class="drop-container">
+												<div class="drop-content">
+														<a class="drop-trigger" data-mdb-toggle="collapse" href="#maleChest">Chest Workouts</a>
+														<div class="hidden-content collapse" id="maleChest">
+																<img src="images/men/upper body/chest/decline.jpg" alt="Sample">
+								<p><span>Decline push ups</span><br><br>Kneel down with your back to the bench. Put your hands on the floor,<br>shoulders over your wrists and elbows at 45 degrees.<br>Brace your core, glutes, and quads.<br>Push into the floor to return to starting position, extending your elbows.<br>Complete 2 to 4 sets of 8 to 20 repetitions.</p>
+								<img src="images/men/upper body/chest/pushup.jpeg" alt="Sample">
+								<p><span>Standard push ups</span><br><br>1.Get down on all fours, placing your hands slightly wider than your shoulders.<br>2.Straighten your arms and legs.<br>3.Lower your body until your chest nearly touches the floor.<br>4.Pause, then push yourself back up.<br>5.Repeat.</p>
+								<img src="images/men/upper body/chest/plyo push.jpg" alt="Sample">
+								<p><span>Plyometric Push-ups</span><br><br>How do you do plyometric push-ups?Image result for plyometric  push ups step by step<br>Start in a plank position on your knees, kneeling forward slightly to get in a high plank position.<br>Align your palms under your shoulders. Bend your arms to lower yourself into a pushup.<br>Immediately push back up explosively, taking your hands off the floor.</p>
+								<img src="images/men/upper body/chest/wide push.jpeg" alt="Sample">
+								<p><span>Wide Push-ups</span><br><br>Begin to lower your body by bending your elbows,<br>keeping your core tight and your back flat, until your chest grazes the floor.<br>Elbows will flare more than in a standard pushup.<br>Immediately extend your elbows and push your body back up. Repeat for as many reps as possible for 3 sets.</p>
+								<img src="images/men/upper body/chest/diamond push up.jpg" alt="Sample">
+								<p><span>Diamond Push-ups</span><br><br>With proper form, diamond push-ups activate chest muscles like the pectoralis major,<br>shoulder muscles like the anterior deltoid,and leg muscles like the quadriceps.<br>Diamond push-ups increase core stability and strength.</p>
+														</div>
+												</div>
+										</div> <!-- end of chest -->
+										
+										<!-- Abdominal -->
+										<div class="drop-container">
+												<div class="drop-content">
+														<a class="drop-trigger" data-mdb-toggle="collapse" href="#maleAbs">Abdominal Workouts</a>
+														<div class="hidden-content collapse" id="maleAbs">
+																<img src="images/men/upper body/abs/Heel touch.jpg" alt="Sample">
+								<p><span>Heel touch</span><br><br>And keep your feet flat on the ground shoulder-width apart keep your arm by your side.<br>This is a starting position now exhale and crunch your torso up to your right and touch your right heel.</p>
+								<img src="images/men/upper body/abs/leg-raise.jpg" alt="Sample">
+								<p><span>Leg raisses</span><br><br>Begin by hovering the feet above the floor end by drawing the legs in until the legs are straight above the hips perpendicular to the torso.</p>
+								<img src="images/men/upper body/abs/russian-twist.jpg" alt="Sample">
+								<p><span>Russian twists</span><br><br>slightly bend your knees interlock your fingers rotate.<br>At the trunk bringing one elbow towards the floor and slightly drop your knees to the opposite side switch sides exhale with each rotation.</p>
+								<img src="images/men/upper body/abs/Side plank with dip.jpg" alt="Sample">
+								<p><span>Side plank with dips</span><br><br>Lie on your side with legs stretched out and place your elbow on the floor directly underneath your shoulder with palm grasping the floor.<br>Pile your feet on top of each other and lift your body up to neutral.<br>Dip your hips down toward the floor and lift them higher than neutral.<br>Complete at least 4 dips on each side.</p>
+								<img src="images/men/upper body/abs/side plank1.jpg" alt="Sample">
+								<p><span>Side Plank</span><br><br>Start in an elbow plank. Extend your left leg out to the side, about eight inches, gently tapping your toes on the ground.<br>Bring your foot back into a plank. Repeat the same movement with your right leg.</p>
+														</div>
+												</div>
+										</div>
+										
+								</div> <!-- end of container -->
+						</div> <!-- end of modal -->
 						
+						<!-- Lower -->
+						<div class="workout-modal" id="lowerM">
+								<div class="modal-container">
+										<a href="#" class="close">&times;</a>
+										<h2>Lower Body Workout for Male</h2>
+										<div class="drop-container">
+												<div class="drop-content">
+														<div class="hidden-content">
+																<img src="images/men/lower body/squats.jpg" alt="">
+																<p><span>Squats</span><br><br>Step 1: Stand straight with feet hip-width apart<br>Step 2: Tighten your stomach muscles.<br>Step 3: Lower down, as if sitting in an invisible chair.<br>Step 4: Straighten your legs to lift back up.<br>Step 5: Repeat the movement.</p>
+							<img src="images/men/lower body/lunges.jpeg" alt="Sample">
+							<p><span>Lunges</span><br><br>To correctly do a lunge: Start by standing up tall.<br>Step forward with one foot until your leg reaches a 90-degree angle.<br>Lift your front lunging leg to return to the starting position.<br>Repeat 10 to 12 reps on one leg, or switch off between legs until you've totaled 10 to 12 reps per leg.</p>
+							<img src="images/men/lower body/pistol squat.png" alt="Sample"></img>
+							<p><span>Pistol Squat</span><br><br>Stand on one foot, and lower into a squat.<br>Continue all the way to the bottom of the squat (when your butt touches or nearly touches your heel), slowly and in control, then gently roll onto your back.<br>Roll forward, and carry your momentum to come back up onto your foot and stand up for one repetition.</p>
+							<img src="images/men/lower body/Calf Raise.jpg" alt="Sample"></img>
+							<p><span>Calf Raise</span><br><br>With your toes pointing forwards, raise your heels off the floor and contract your calves.</p>
+							<img src="images/men/lower body/glute-bridge.jpg" alt="Sample"></img>
+							<p><span>Glute Bridge</span><br><br>Lie face up on the floor, with your knees bent and feet flat on the ground.<br>Keep your arms at your side with your palms down.</p>
+							<img src="images/men/lower body/stiff-leg-deadlift.jpg" alt="Sample"></img>
+							<p><span>Stiff-Leg Deadlift</span><br><br>Straight. As you start to feel a deep stretch in your hamstrings.<br>You're then going to drive through your heels.<br>And pull flexing your hamstrings and glutes to bring the bar back to the starting</p>
+							<img src="images/men/lower body/side lunges.jpg" alt="Sample"></img>
+							<p><span>Side Lunges</span><br><br>Start standing tall, feet hip-width distance apart.<br>Take a wide step out to the left. Bend your left knee as you push your hips back.<br>Push off with your left leg to return to standing.<br>Perform 10 to 12 lunges on the left side before switching to the right.</p>
+																
+														</div>
+												</div>
+										</div> 
+								</div> <!-- end of container -->
+						</div> <!-- end of modal -->
+						
+						
+						<!-- Upper Female -->
+						
+						<div class="workout-modal" id="upperF">
+								<div class="modal-container">
+										<a href="#" class="close">&times;</a>
+										<h2>Upper Body Workout for Female</h2>
+										
+										<!-- arms -->
+										<div class="drop-container">
+												<div class="drop-content">
+														<a class="drop-trigger" data-mdb-toggle="collapse" href="#femaleArm">Arm Workouts</a>
+														<div class="hidden-content collapse" id="femaleArm">
+																<img src="images/women/upper body/arms/Lateral Raise.jpg" alt="Sample">
+								<p><span>Lateral Raise</span><br><br>Stand tall, a dumbbell in each hand.<br>Raise your arms simultaneously just a couple inches out to each side and pause.<br>Lift the dumbbells up and out to each side, keeping your arms almost completely straight, stopping when your elbows reach shoulder-height and your body is forming a "T" shape.</p>
+								<img src="images/women/upper body/arms/Triceps Push-Up.jpg" alt="Sample">
+								<p><span>Triceps Push-Up</span><br><br>Your lower down your elbows are gonna stay close to your body stop when your shoulders get in line with your elbows on the way.<br>Up hips stay in line with your shoulders</p>
+								<img src="images/women/upper body/arms/Biceps Curl.jpeg" alt="Sample">
+								<p><span>Biceps Curl</span><br><br>Start standing with a dumbbell in each hand.<br>Your elbows should rest at your sides and your forearms should extend out in front of your body.<br>Bring the dumbbells all the way up to your shoulders by bending your elbows.<br>Reverse the curl slowly and repeat.</p>
+								<img src="images/women/upper body/arms/Dumbbell Row.jpg" alt="Sample">
+								<p><span>Dumbbell Row</span><br><br>Step 1 Stand with feet shoulder-width apart and hold a dumbbell in each hand.<br>Bend the knees slightly and bend over at the waist with your back straight.<br>Let dumbbells hand in front of the body with arms fully extended.<br>Hold for one second in the top position, then lower the dumbbells to the starting position.</p>
+								<img src="images/women/upper body/arms/Plank to Push-Up.jpg" alt="Sample">
+								<p><span>Plank to Push-Up</span><br><br>Begin on all fours in a forearm plank, which is a standard plank position with your elbows dropped to the mat.<br>Engage your core to keep your hips as still as possible.<br>Push up onto your other hand.<br>Lower back down to your elbows, one arm at a time.<br>Repeat with alternating arms.</p>
+								<img src="images/women/upper body/arms/Dumbbell Curl and Press.jpg" alt="Sample"></img>
+								<p><span>Dumbbell Curl and Press</span><br><br>Hold a dumbbell in each hand and stand with your feet as wide apart as your hips.<br>Let your arms hang down at your sides with your palms forward.<br>Pull your abdominals in, stand tall, and keep your knees slightly bent.<br>Curl both arms upward until they're in front of your shoulders.</p>
+								<img src="images/women/upper body/arms/Lateral Plank Walk.jpg" alt="Sample">
+								<p><span>Lateral Plank Walk</span><br><br>Begin in plank position with your hands underneath your shoulders, and your body in one straight line.<br>Simultaneously cross your right hand toward the left as you step your left foot out to the left.<br>Reverse directions taking three steps the right.<br>Do 15 reps in each direction to complete one set.</p>
+								<img src="images/women/upper body/arms/Triceps Dips.jpg" alt="Sample">
+								<p><span>Triceps Dips</span><br><br>Grip the front edges of a chair or bench with your hand.<br>Hover your butt just off and in front of the seat, feet flat, and legs bent so thighs are parallel to the floor.<br>Straighten your arms.<br>Lower your body toward the floor until your arms form 90-degree angles.</p>
+														</div>
+												</div>
+										</div> <!-- end arms -->
+										
+										<!-- Chest -->
+										<div class="drop-container">
+												<div class="drop-content">
+														<a class="drop-trigger" data-mdb-toggle="collapse" href="#femaleChest">Chest Workouts</a>
+														<div class="hidden-content collapse" id="femaleChest">
+																<img src="images/women/upper body/chest/Resistance Band Arm Pulses.jpg" alt="Sample">
+								<p><span>Resistance Band Arm Pulses</span><br><br>1 As a part of a warmup routine, the lateral band walking exercise engages many of the deep muscles that stabilize the pelvis.<br>Doing this exercise before working out can improve hip, foot, and ankle stability as well as knee joint stabilization.</p>
+								<img src="images/women/upper body/chest/Chest Squeeze.jpg" alt="Sample">
+								<p><span>Chest Squeeze</span><br><br>Hold two dumbbells with palms facing forward and your thumbs wrapped around the handle.<br>On an inhale, lower the dumbbells slightly wider than your mid-chest, slowly and with control.<br>Gently touch the dumbbells to your chest.<br>On an exhale, press your arms upwards, keeping your elbows slightly bent.</p>
+								<img src="images/women/upper body/chest/Plank Rows.jpg" alt="Sample">
+								<p><span>Plank Rows</span><br><br>1.Come into plank position with a dumbbell in each hand.<br>2.Keep your plank still and row one arm up on an exhale, keeping your elbow close to your rib cage.<br>3.Repeat the row movement, alternating arms without losing the stability of your plank.</p>
+								<img src="images/women/upper body/chest/Hook Punches exercise.jpg" alt="Sample">
+								<p><span>Hook Punches</span><br><br>As you swing, bring your lead elbow directly behind your lead fist so that your punch lands with your lead arm bent at the elbow and your closed fist and knuckles pointing down.When you throw your punch, exhale sharply and keep your chin low and tight to your body the whole time.</p>
+								<img src="images/women/upper body/chest/Pushups.jpg" alt="Sample">
+								<p><span>Pushups</span><br><br>Get down on all fours, placing your hands slightly wider than your shoulders.<br>Straighten your arms and legs.<br>Lower your body until your chest nearly touches the floor.<br>Pause, then push yourself back up.<br>Repeat.</p>
+								<img src="images/women/upper body/chest/Lying Chest Fly.jpg" alt="Sample">
+								<p><span>Lying Chest Fly</span><br><br> Get down on all fours, placing your hands slightly wider than your shoulders.<br>Straighten your arms and legs.<br>Lower your body until your chest nearly touches the floor.<br>Pause, then push yourself back up.<br>Repeat.</p>
+								<img src="images/women/upper body/chest/Standard Chest Press.jpg" alt="Sample">
+								<p><span>Standard Chest Press</span><br><br>Is the chest press good for a woman?<br>Image result<br>Marsland explains that the bench press can be extremely beneficial in developing strength in women, since it works several parts of your body.<br>She says women should start gently, especially if they don't already have a lot of upper-body strength.<br>You can also do dips, pushups, and plank variations to build strength.</p>
+								<img src="images/women/upper body/chest/Narrow Chest press.jpg" alt="Sample">
+								<p><span>Narrow Chest press</span><br><br>Sit on an exercise bench with a dumbbell in each hand.<br>Using a neutral grip, place and press the dumbbells together.<br>Pull your shoulders down and back, and brace your abs.<br>Lie flat on the bench and hold the dumbbells on your chest.<br>Press the weights inward as hard as you can.<br>Tuck your upper arms into your sides.<br>Push the weights up and over your chest until your arms are straight but not locked.<br>Keep the tension on your pecs by continuing to press the weights together.<br>Lower the dumbbells to your chest and repeat.<br>Do not ease up on the inward pressure; keep pushing the dumbbells together for the entire duration of your set.</p>	
+														</div>
+												</div>
+										</div> <!-- end of chest -->
+										
+										<!-- Abdominal -->
+										<div class="drop-container">
+												<div class="drop-content">
+														<a class="drop-trigger" data-mdb-toggle="collapse" href="#femaleAbs">Abdominal Workouts</a>
+														<div class="hidden-content collapse" id="femaleAbs">
+																<img src="images/women/upper body/abs/Flutter kicks.jpg" alt="Sample">
+								<p><span>Flutter kicks</span><br><br>Lie on your back and extend your legs up to a 45-degree angle.<br>Keeping your legs stick straight and glued together with your toes pointed, start lowering one leg.<br>Raise your lowered leg and lower the other, focusing on keeping your core engaged.<br>Continue the movement, alternating between legs.</p>
+								<img src="images/women/upper body/abs/Scissor Kicks.jpg" alt="Sample">
+								<p><span>Scissor Kicks</span><br><br>Lie on your back with your arms down by your sides.<br>Lift both of your legs a few inches off the ground and separate them slightly into a “V” shape.<br>Keeping both legs straight, bring your legs together and cross your right leg over the left.<br>Continue alternating until you've completed all reps.</p>
+								<img src="images/women/upper body/abs/V-sits.jpg" alt="Sample">
+								<p><span>V-sits</span><br><br>Step 1: Sit down on the ground with legs straight out.<br>Step 2: Lift your legs up so that they are at a 45 degree angle with the floor.<br>Step 3: Lean your torso back till it also is at a 45 degree angle.<br>Step 4: Hold your arms out in front of you so they are parallel with your legs.</p>
+								<img src="images/women/upper body/abs/V-ups.jpg" alt="Sample">
+								<p><span>V-ups</span><br><br>Lie face-up on the floor with your legs and arms straight and lifted off the floor slightly.<br>In one movement, lift your torso and legs as if you're trying to touch your toes.<br>Lower your body back down. That's one rep.</p>
+								<img src="images/women/upper body/abs/Hip Dips.jpg" alt="Sample">
+								<p><span>Hip Dips</span><br><br>Here's how to do it: Come forward onto your forearms and lift from your core into a plank.<br>Make a fist with each hand, or keep your hands flat on the ground.<br>Pull in your abs as you rotate your hips to the left side and tap the floor.<br>Then rotate to the right and tap the floor on the other side.</p>
+								<img src="images/women/upper body/abs/Toe Touches.jpeg" alt="Sample">
+								<p><span>Toe Touches</span><br><br>Step 1: Stand upright with your feet shoulder width apart, toes facing forward.<br>Step 2: Keep your legs straight and your knees slightly bent with your arms extended down by your side. This is your starting position.<br>Step 3: Keeping your body loose, bend forward at the torso and let your fingers hang down toward your toes.<br>Step 4: Hold for 20 counts and then return to the starting position.</p>
+								<img src="images/women/upper body/abs/Vertical Leg Crunch.jpg" alt="Sample">
+								<p><span>Vertical Leg Crunch</span><br><br>To perform a vertical leg crunch lie on your back with your legs straight up placing your hands to the sides of your head lift.<br>Your head and shoulders off the floor.</p>
+								<img src="images/women/upper body/abs/Leg Lifts.jpg" alt="Sample">
+								<p><span>Leg Lifts</span><br><br>Lie on your back, legs straight and together.<br>Keep your legs straight and lift them all the way up to the ceiling until your butt comes off the floor.<br>Slowly lower your legs back down till they're just above the floor. Hold for a moment.<br>Raise your legs back up. Repeat.</p>
+														</div>
+												</div>
+										</div>
+										
+								</div> <!-- end of container -->
+						</div> <!-- end of modal -->
+						
+						<!-- Lower female -->
+						<div class="workout-modal" id="lowerF">
+								<div class="modal-container">
+										<a href="#" class="close">&times;</a>
+										<h2>Lower Body Workout for Female</h2>
+										<div class="drop-container">
+												<div class="drop-content">
+														<div class="hidden-content">
+																<img src="images/women/lower body/Bridge.jpg" alt="Sample">
+						<p><span>Bridge</span><br><br>Lower. Right back down. Now.<br>As you come down you want to make sure that your lower back kisses.<br>The ground that way you know that your core is still engaged.<br>Before you come right back up</p>
+						<img src="images/women/lower body/Single leg bridge.jpg" alt="Sample">
+						<p><span>Single leg bridge</span><br><br>You press up you're going to focus on just one leg here keeping all the weight in your heel of the leg that's on the floor.</p>
+						<img src="images/women/lower body/Marching Bridge.jpg" alt="Sample">
+						<p><span>Marching Bridge</span><br><br>You go three sets and that should be enough to get your glutes and your hamstrings activated.<br>And that's how you do a glute bridge March.</p>
+						<img src="images/women/lower body/Backward Lunges.jpeg" alt="Sample">
+						<p><span>Backward Lunges</span><br><br>Stand tall with your feet hip distance apart.<br>Take a large step backward and lower your body toward the floor.<br>Both legs should be bent at a 90-degree angle at the bottom of the lunge.<br>Rise back to start and repeat. Targets: glutes, quads, hamstrings.</p>
+						<img src="images/women/lower body/Single Leg Hip Thrust.jpg" alt="Sample">
+						<p><span>Single Leg Hip Thrust</span><br><br>So letting your hips drop under into extension of the back and then tucking squeezing you can even use your hand.<br>Feel that glute working driving through that leg.</p>
+						<img src="images/women/lower body/Fire Hydrant.jpg" alt="Sample">
+						<p><span>Fire Hydrant</span><br><br>You can place your hands on the back of a chair for balance.<br>Stand with your legs hip-width apart.<br>Lift your leg to 45 degrees without moving the rest of your body.<br>Lower your leg to starting position to complete 1 rep.</p>
+						<img src="images/women/lower body/Frog Pump.jpg" alt="Sample">
+						<p><span>Frog Pump</span><br><br>1.Sit back with your feet in a wide stance and with the toes turned out at an angle.<br>2.Jump forward and up, land on your toes, and squat.<br>3.Jump back and return to the starting position.<br>4.Repeat this back and forth movement until the set is complete.</p>
+						<img src="images/women/lower body/Donkey Kicks.jpg" alt="Sample">
+						<p><span>Donkey Kicks</span><br><br>Position yourself on all fours on a mat.<br>Position your hands underneath your shoulders and place your knees under your hips.<br>Keep your right knee bent at 90 degrees and flex the foot as you lift the knee until it is level with the hip.<br>Lower the knee without touching the floor and repeat the lift.<br>Once you’ve completed the reps on the right leg, switch legs.</p>
+						<img src="images/women/lower body/Bulgarian Split Squats.jpg" alt="Sample">
+						<p><span>Bulgarian Split Squats</span><br><br>Get down on all fours and position your hands under your shoulders and your knees under your hips.<br>Kick back with one leg and squeeze the glutes.<br>Bend the knee, lower the leg, and repeat.<br>Switch legs. Proper Form And Breathing Pattern.</p>
+														</div>
+												</div>
+										</div> 
+								</div> <!-- end of container -->
+						</div> <!-- end of modal -->
 				</div> <!-- end of workout page -->
+				
+				<!-- diet page -->
 				<div class="dietplan-page" id="diet">
 						
+						<div class="averageDiet" id="aver">
+								<h2>Average Diet Plan</h2>
+								<p>The following meal plan provides options for 7 days of meals and snacks. The plan consists of nutrient-dense whole foods.
+A person should determine the appropriate portion sizes, according to their weight loss goals, activity levels, and individual requirements.
+</p>
+								<h3>Show Table : </h3> <a class="show" href="#aveDiet">Average Diet Table</a>
+						</div>
+						<div class="underweightDiet" id="under">
+								<h2>Underweight Diet Plan</h2>
+								<p>Just like obesity causes health concerns, having less weight than the normal also poses health issues. Being underweight can be result of poor nutrition and should be a matter of concern. If the body does not receive adequate amounts of nutrients, the body fails to function to its utmost. This could result in the imbalance in the metabolism. Inculcating a healthy diet for underweight will provide the necessary nutrients for better functioning of the body.<br>To deal with underweight, maintaining a proper nutritious diet is important. We create a weight gain meal plan for underweight, easily followed by both males and females. We try to add food with high-calorie foods for underweight adults. This diet meal plan is used to provide the right nutrients, vitamins, and minerals required by the body. You can easily buy food items listed in the underweight diet meal plan in your local markets.
+
+</p>
+								<h3>Show Table : </h3> <a class="show" href="#underDiet">Underweight Diet Table</a>
+						</div>
+						<div class="overweightDiet" id="over">
+								<h2>Overweight Diet Plan</h2>
+								<p>A low fat diet, as the name implies, is a dietary pattern that limits the fat intake at about 1/3 of the total daily calories consumed. It consists of little fat, particularly saturated fats and cholesterol which lead to increased blood cholesterol levels and heart attack.<br>This type of diet plan to reduce obesity focuses on foods that contain whole grains, fruits and vegetables. It is directed towards weight loss and treatment of certain diseases by offering 20 to 30 percent of total daily calories from fat. Plenty of vegetables and proteins in a typical low fat diet supply the body with energy but very little fats.
+</p>
+								<h3>Show Table : </h3> <a class="show" href="#overDiet">Overweight Diet Table</a>
+						</div>
+						
+						<!-- ave modal -->
+						<div class="modal-diet" id="aveDiet">
+								<div class="modal-diet-content">
+										<a href="#">Click to Close</a>
+										<div class="diet-tbl">
+												<table id="avtbl">
+						<tr>
+						<th colspan="2">Monday</th>
+						</tr>
+						  <tr>
+						<th>Breakfast<br>(555 calories)</th>
+						<td>1 grapefruit + 2 poached eggs (or fried in a non-stick pan) + 2 slices whole-grain toast with one pat of butter each + 1 cup low-fat milk + 1 cup of black coffee or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(360 calories)</th>
+						<td>1 banana + 1 cup plain yogurt with two tablespoons honey + Glass of water</td>
+						</tr>
+						<tr>
+						<th>Lunch<br>(425 calories)</th>
+						<td>Chicken breast (6-ounce portion), baked or roasted (not breaded or fried)+ Large garden salad with tomato and onion with one cup croutons, topped with one tablespoon oil and vinegar (or salad dressing) + Glass of water</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(157 calories)</th>
+						<td>1 cup carrot slices + 3 tablespoons hummus + 1/2 piece of pita bread + Glass of water or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Dinner<br>(646 calories)</th>
+						<td>1 cup steamed broccoli + One cup of brown rice + Halibut (four-ounce portion) + Small garden salad with one cup spinach leaves, tomato, and onion topped with two tablespoons oil and vinegar or salad dressing + 1 glass white wine (regular or dealcoholized) + Sparkling water with lemon or lime slice</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(100 calories</th>
+						<td>1 cup blueberries + 2 tablespoons whipped cream (the real stuff—whip your own or buy in a can) + Glass of water</td>
+						</tr>
+						 <tr>
+						<th colspan="2">Tuesday</th>
+						</tr>
+						  <tr>
+						<th >Breakfast<br>(521 calories)</th>
+						<td>1 whole-wheat English muffin with two tablespoons peanut butter + 1 orange + Large glass (12 ounces) non-fat milk + 1 cup of black coffee or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(130 calories)</th>
+						<td>2 oatmeal cookies with raisins + Glass of water, hot tea, or black coffee</td>
+						</tr>
+						<tr>
+						<th>Lunch<br>(437 calories)</th>
+						<td>a turkey sandwich (six ounces of turkey breast meat, large tomato slice, green lettuce and mustard on two slices of whole wheat bread + 1 cup low-sodium vegetable soup + Glass of water</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(60 calories)</th>
+						<td>1 cup (about 30) grapes + Glass of water or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Dinner<br>(671 calories)</th>
+						<td>5-ounce sirloin steak + 1 cup mashed potatoes + 1 cup cooked spinach + 1 cup green beans + 1 glass beer (regular, lite or non-alcohol) + Sparkling water with lemon or lime slice</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(337 calories)</th>
+						<td>2 slices whole wheat bread with two tablespoons jam (any variety of fruit)+ 1 cup non-fat milk + Glass of water</td>
+						</tr>
+						<tr>
+						<th colspan="2">Wednesday</th>
+						</tr>
+						  <tr>
+						<th >Breakfast<br>(543 calories)</th>
+						<td>1 medium bran muffin + 1 orange + 1 serving turkey breakfast sausage + 1 orange + 1 cup non-fat milk + 1 cup black coffee or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(71 calories)</th>
+						<td>1 fresh pear + 1 cup of flavored soy milk + Glass of water, hot tea, or black coffee</td>
+						</tr>
+						<tr>
+						<th>Lunch<br>(329 calories)</th>
+						<td>Low sodium chicken noodle soup with six saltine crackers + 1 medium apple + Glass of water</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(151 calories)</th>
+						<td>1 apple + 1 slice Swiss cheese + Sparkling water with lemon or lime slice</td>
+						</tr>
+						<tr>
+						<th>Dinner<br>(784 calories)</th>
+						<td>8-ounce serving of turkey breast meat + 1 cup baked beans + 1 cup cooked carrots + 1 cup cooked kale + 1 glass of wine</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(285 calories)</th>
+						<td>1 cup of frozen yogurt+ 1 cup fresh raspberries</td>
+						</tr>
+						<tr>
+						<th colspan="2">Thursday</th>
+						</tr>
+						  <tr>
+						<th >Breakfast<br>(557 calories)</th>
+						<td>1 cup whole wheat flakes with one cup non-fat milk and one teaspoon sugar + 1 banana + 1 slice whole-grain toast with one tablespoon peanut butter + 1 cup of black coffee or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(106 calories)</th>
+						<td>1 cup grapes and one tangerine + Glass of water, hot tea, or black coffee</td>
+						</tr>
+						<tr>
+						<th>Lunch<br>(419 calories)</th>
+						<td>Tuna wrap with one wheat flour tortilla, one-half can water-packed tuna (drained), one tablespoon mayonnaise, lettuce, and sliced tomato + 1 sliced avocado + 1 cup non-fat milk</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(323 calories)</th>
+						<td>1 cup cottage cheese (1-percent fat) + 1 fresh pineapple slice + 4 graham crackers + Sparkling water with lemon or lime slice</td>
+						</tr>
+						<tr>
+						<th>Dinner<br>(585 calories)</th>
+						<td>1 serving lasagna+ Small garden salad with tomatoes and onions topped with one tablespoon salad dressing + 1 cup non-fat milk</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(158 calories)</th>
+						<td>1 apple+ 1 cup non-fat milk</td>
+						</tr>
+							<tr>
+						<th colspan="2">Friday</th>
+						</tr>
+						  <tr>
+						<th >Breakfast<br>(449 calories)</th>
+						<td>1 piece of French toast with one tablespoon maple syrup + 1 scrambled or poached egg + 1 serving turkey bacon + 1 cup orange juice + 1 cup black coffee or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(223 calories)</th>
+						<td>1 cup sliced carrots + 1 cup cauliflower pieces + 2 tablespoons ranch dressing + Glass of water, hot tea, or black coffee</td>
+						</tr>
+						<tr>
+						<th>Lunch<br>(542 calories)</th>
+						<td>Veggie burger on a whole grain bun + 1 cup northern (or other dry) beans + 1 cup non-fat milk</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(202 calories)/th>
+						<td>1 apple + 1 pita with two tablespoons hummus + Sparkling water with lemon or lime slice</td>
+						</tr>
+						<tr>
+						<th>Dinner<br>(634 calories)</th>
+						<td>1 trout filet+ 1 cup green beans + 1 cup brown rice + 1 small garden salad with two tablespoons salad dressing + 1 glass of beer (regular, lite or non-alcohol)</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(201 calories)</th>
+						<td>1 fresh peach + 1 cup cottage cheesek</td>
+						</tr>
+							<tr>
+						<th colspan="2">Saturday</th>
+						</tr>
+						  <tr>
+						<th >Breakfast<br>(401 calories )</th>
+						<td>1 cup corn flakes with two teaspoons sugar and one cup non-fat milk + 1 banana+ 1 hard-boiled egg + 1 cup black coffee or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(302 calories)</th>
+						<td> 1 cup plain yogurt with 1 tablespoon honey, 1/2 cup blueberries, and 1 tablespoon almonds + Glass of water, hot tea, or black coffee</td>
+						</tr>
+						<tr>
+						<th>Lunch<br>(413 calories)</th>
+						<td>1 cup whole wheat pasta with 1/2 cup red pasta sauce + Medium garden salad with tomatoes and onions and 2 tablespoons salad dressing + Glass of water </td>
+						</tr>
+						<tr>
+						<th>Snack<br>(303 calories)</th>
+						<td>1 and 1/2 cup cottage cheese + 1 fresh peach + Glass of water</td>
+						</tr>
+						<tr>
+						<th>Dinner<br>(500 calories)</th>
+						<td>4 and 1/2 ounce serving of pork loin + Small garden salad with tomatoes and onions topped with 2 tablespoons oil and vinegar (or salad dressing) + 1 small baked sweet potato + 1 cup asparagus + 1 glass wine (regular or dealcoholized) + Sparkling water with lemon or lime slice</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(279 calories)</th>
+						<td>5 graham crackers+ 1 cup non-fat milk + 1 cup strawberries</td>
+						</tr>
+						<tr>
+						<th colspan="2">Sunday</th>
+						</tr>
+						  <tr>
+						<th >Breakfast<br>(442 calories)</th>
+						<td>1 cup cooked oatmeal with 1/2 cup blueberries, 1/2 cup non-fat milk, and 1 tablespoon almond slivers+ 2 slices turkey bacon + 1 cup non-fat milk to drink + 1 cup black coffee or herbal tea</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(343 calories)</th>
+						<td>1 cup plain yogurt with 1 tablespoon honey, 1/2 cup strawberries, and 2 tablespoons almond slivers + Glass of water, hot tea, or black coffee</td>
+						</tr>
+						<tr>
+						<th>Lunch<br>(498 calories)</th>
+						<td>6-ounce baked chicken breast + Large garden salad with tomatoes and onions and two tablespoons salad dressing + 1 baked sweet potato + 1 whole-wheat dinner roll + Glass of water </td>
+						</tr>
+						<tr>
+						<th>Snack<br>(112 calories)</th>
+						<td>1 cup raw broccoli florets + 1 cup raw sliced carrot + 2 tablespoons veggie dip or salad dressing + 1 fresh peach + Glass of water</td>
+						</tr>
+						<tr>
+						<th>Dinner<br>(671 calories)</th>
+						<td>3-ounce serving of baked or grilled salmon + 1/2 cup black beans + 1 cup Swiss chard + 1 cup brown rice + 1 whole wheat dinner roll with a pat of butter + Sparkling water with lemon or lime slice</td>
+						</tr>
+						<tr>
+						<th>Snack<br>(62 calories)</th>
+						<td>1 Orange</td>
+						</tr>
+						 </table>
+												
+										</div>
+								</div>
+						</div>
+						 
+						 <!-- underweight modal -->
+						 <div class="modal-diet" id="underDiet">
+								<div class="modal-diet-content">
+										<a href="#">Click to Close</a>
+										<div class="diet-tbl">
+												
+												<table id="untbl">
+							<tr>
+							<th colspan="2">Monday</th>
+							</tr>
+							  <tr>
+							<th >Breakfast (8:00-8:30AM)</th>
+							<td>3 onion stuffed parantha + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+							</tr>
+							<tr>
+							<th>Mid-Meal (11:00-11:30AM)</th>
+							<td>1 cup mango shake</td>
+							</tr>
+							<tr>
+							<th>Lunch (2:00-2:30PM)</th>
+							<td>1 cup moong dal/ chicken curry + 1 cup potato and caulifllower vegetable + 3 chapatti + 1/2 cup rice + salad</td>
+							</tr>
+							<tr>
+							<th>Evening (4:00-4:30PM)</th>
+							<td>1 cup pomegranate juice + 2 butter toasted bread</td>
+							</tr>
+							<tr>
+							<th>Dinner (8:00-8:30PM)</th>
+							<td>1 cup beans potato vegetable + 3 chapatti + salad</td>
+							</tr>
+							 <tr>
+							<th colspan="2">Tuesday</th>
+							</tr>
+							  <tr>
+							<th >Breakfast (8:00-8:30AM)</th>
+							<td>3 paneer stuffed besan cheela + green chutney + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+							</tr>
+							<tr>
+							<th>Mid-Meal (11:00-11:30AM)</th>
+							<td>1 apple smoothie with maple syrup</td>
+							</tr>
+							<tr>
+							<th>Lunch (2:00-2:30PM)</th>
+							<td>1 cup masoor dal + 1 cup calocasia + 3 chapatti + 1/2 cup rice + 1 cup low curd + salad</td>
+							</tr>
+							<tr>
+							<th>Evening (4:00-4:30PM)</th>
+							<td>1 cup tomato soup with bread crumbs + 1 cup aloo chaat</td>
+							</tr>
+							<tr>
+							<th>Dinner (8:00-8:30PM)</th>
+							<td>1 cup carrot peas vegetable +3 chapatti + salad</td>
+							</tr>
+							<tr>
+							<th colspan="2">Wednesday</th>
+							</tr>
+							  <tr>
+							<th >Breakfast (8:00-8:30AM)</th>
+							<td>1.5 cup vegetable bread upma + 1 cup milk + 3 cashews + 4 almonds + 2 walnuts</td>
+							</tr>
+							<tr>
+							<th>Mid-Meal (11:00-11:30AM)</th>
+							<td>1 cup ripe banana with 2 tsp ghee</td>
+							</tr>
+							<tr>
+							<th>Lunch (2:00-2:30PM)</th>
+							<td>1 cup rajma curry + 1 cup spinach potato + 3 chapatti + 1/2 cup rice + salad</td>
+							</tr>
+							<tr>
+							<th>Evening (4:00-4:30PM)</th>
+							<td>1 cup vegetable juice + 1 cup upma</td>
+							</tr>
+							<tr>
+							<th>Dinner (8:00-8:30PM)</th>
+							<td>1.5 cup parwal vegetable + 3 chapatti + salad</td>
+							</tr>
+							<tr>
+							<th colspan="2">Thursday</th>
+							</tr>
+							  <tr>
+							<th >Breakfast (8:00-8:30AM)</th>
+							<td>2 cucmber potato sandwich + 1 tsp green chutney + 1 orange juice + 3 cshews + 2 walnuts + 4 almonds</td>
+							</tr>
+							<tr>
+							<th>Mid-Meal (11:00-11:30AM)</th>
+							<td>1 cup buttermilk + 1 cup sweet potato chaat</td>
+							</tr>
+							<tr>
+							<th>Lunch (2:00-2:30PM)</th>
+							<td>1 cup white chana/ fish curry + 3 chapatti + 1/2 cup rice + salad</td>
+							</tr>
+							<tr>
+							<th>Evening (4:00-4:30PM)</th>
+							<td>1 cup almond milk + banana</td>
+							</tr>
+							<tr>
+							<th>Dinner (8:00-8:30PM)</th>
+							<td>1 cup cauliflower potato vegetable + 3 chapatti + salad</td>
+							</tr>
+								<tr>
+							<th colspan="2">Friday</th>
+							</tr>
+							  <tr>
+							<th >Breakfast (8:00-8:30AM)</th>
+							<td>2 cup vegetable poha + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+							</tr>
+							<tr>
+							<th>Mid-Meal (11:00-11:30AM)</th>
+							<td>2 cups watermelon juice</td>
+							</tr>
+							<tr>
+							<th>Lunch (2:00-2:30PM)</th>
+							<td>1 cup chana dal + 1 cup bhindi vegetable + 3 chapatti + 1/2 cup rice + salad</td>
+							</tr>
+							<tr>
+							<th>Evening (4:00-4:30PM)</th>
+							<td>1 cup sprouts salad + 2 potato cheela + green chutney</td>
+							</tr>
+							<tr>
+							<th>Dinner (8:00-8:30PM)</th>
+							<td>1 cup peas mushroom vegetable + 3 chapatti + salad</td>
+							</tr>
+								<tr>
+							<th colspan="2">Saturday</th>
+							</tr>
+							  <tr>
+							<th >Breakfast (8:00-8:30AM)</th>
+							<td>3 vegetable suji cheela + 1 cup strawberry shake + 4 cashews + 4 almonds + 3 walnuts</td>
+							</tr>
+							<tr>
+							<th>Mid-Meal (11:00-11:30AM)</th>
+							<td>1 cup coconut water + 1 cup pomegrate</td>
+							</tr>
+							<tr>
+							<th>Lunch (2:00-2:30PM)</th>
+							<td>1 cup mix dal + 1 cup soybean curry + 3 chapatti + 1/2 cup curd + salad</td>
+							</tr>
+							<tr>
+							<th>Evening (4:00-4:30PM)</th>
+							<td>1 cup fruit salad + 4 pc vegetable cutlets + green chutney</td>
+							</tr>
+							<tr>
+							<th>Dinner (8:00-8:30PM)</th>
+							<td>1 cup karela vegetable + 3 chaptti + salad</td>
+							</tr>
+							<tr>
+							<th colspan="2">Sunday</th>
+							</tr>
+							  <tr>
+							<th >Breakfast (8:00-8:30AM)</th>
+							<td>2 egg brown bread sandwich + green chutney + 1 cup milk + 3 cashews + 4 almonds + 2 walnuts</td>
+							</tr>
+							<tr>
+							<th>Mid-Meal (11:00-11:30AM)</th>
+							<td>1 cup banana shake</td>
+							</tr>
+							<tr>
+							<th>Lunch (2:00-2:30PM)</th>
+							<td>1 cup arhar dal + 1 cup potato curry + 3 chapatti + 1/2 cup rice + 1/2 cup low fat curd + salad</td>
+							</tr>
+							<tr>
+							<th>Evening (4:00-4:30PM)</th>
+							<td>1 cup strawberry smoothie + 1 cup vegetable poha</td>
+							</tr>
+							<tr>
+							<th>Dinner (8:00-8:30PM)</th>
+							<td>1.5 cup chicken curry + 3 chapatti + salad</td>
+							</tr>
+						</table>
+												
+										</div>
+								</div>
+						</div>
+						
+						<!-- overweight modal -->
+						<div class="modal-diet" id="overDiet">
+								<div class="modal-diet-content">
+										<a href="#">Click to Close</a>
+										<div class="diet-tbl">
+												
+												<table id="ovtbl">
+							<tr>
+							<th colspan="2">Monday</th>
+							</tr>
+								<tr>
+							<th >Breakfast (387 calories)</th>
+							<td>2 servings Baked Banana-Nut Oatmeal Cups + 1 clementine</td>
+							</tr>
+							<tr>
+							<th>Snack (190 calories)</th>
+							<td>1 medium apple, sliced + 1 Tbsp. peanut butter</td>
+							</tr>
+							<tr>
+							<th>Lunch(325 calories)</th>
+							<td>1 serving Veggie & Hummus Sandwich</td>
+							</tr>
+							<tr>
+							<th>Snack (105 calories)</th>
+							<td>1 medium banana</td>
+							</tr>
+							<tr>
+							<th>Dinner(507 calories)</th>
+							<td>1 serving Sheet-Pan Chicken Fajita Bowls with 1/3 cup cooked brown rice</td>
+							</tr>
+							<tr>
+							<th colspan="2">Tuesday</th>
+							</tr>
+								<tr>
+							<th >Breakfast<br>(271 calories)</th>
+							<td>1 serving Baked Banana-Nut Oatmeal Cups + 1 medium apple</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(192 calories)</th>
+							<td>1 oz. Cheddar cheese + 1 hard-boiled egg</td>
+							</tr>
+							<tr>
+							<th>Lunch<br>(344 calories)</th>
+							<td>1 serving Chipotle-Lime Cauliflower Taco Bowls</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(35 calories)</th>
+							<td>1 clementine</td>
+							</tr>
+							<tr>
+							<th>Dinner<br>(373 calories)</th>
+							<td>1 serving Zucchini-Chickpea Veggie Burgers with Tahini-Ranch Sauce</td>
+							</tr>
+							<tr>
+							<th colspan="2">Wednesday</th>
+							</tr>
+								<tr>
+							<th >Breakfast<br>(271 calories)</th>
+							<td>1 serving Baked Banana-Nut Oatmeal Cups + 1 medium apple</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(70  calories)</th>
+							<td>2 clementines</td>
+							</tr>
+							<tr>
+							<th>Lunch<br>(344 calories)</th>
+							<td>1 serving Chipotle-Lime Cauliflower Taco Bowls</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(105 calories)</th>
+							<td>1 medium banana</td>
+							</tr>
+							<tr>
+							<th>Dinner<br>(401 calories)</th>
+							<td>1 serving Easy Salmon Cakes over 2 cups baby spinach</td>
+							</tr>
+							<tr>
+							<th colspan="2">Thursday</th>
+							</tr>
+								<tr>
+							<th >Breakfast<br>(287 calories)</th>
+							<td>1 serving Muesli with Raspberries</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(35 calories)</th>
+							<td>1 clementine</td>
+							</tr>
+							<tr>
+							<th>Lunch<br>(344 calories)</th>
+							<td>1 serving Chipotle-Lime Cauliflower Taco Bowls</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(32 calories)</th>
+							<td>1/2 cup raspberries</td>
+							</tr>
+							<tr>
+							<th>Dinner<br>(521 calories)</th>
+							<td>1 serving Chicken & Cucumber Lettuce Wraps with Peanut Sauce</td>
+							</tr>
+								<tr>
+							<th colspan="2">Friday</th>
+							</tr>
+								<tr>
+							<th >Breakfast<br>(287 calories)</th>
+							<td>1 serving Muesli with Raspberries</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(135 calories)</th>
+							<td>1/2 oz. Cheddar cheese + 1 hard-boiled egg</td>
+							</tr>
+							<tr>
+							<th>Lunch<br>(344 calories calories)</th>
+							<td>1 serving Chipotle-Lime Cauliflower Taco Bowls</td>
+							</tr>
+							<tr>
+							<th>Dinner<br>(454 calories)</th>
+							<td>1 serving Mediterranean Ravioli with Artichokes & Olives</td>
+							</tr>
+								<tr>
+							<th colspan="2">Saturday</th>
+							</tr>
+								<tr>
+							<th >Breakfast<br>(287 calories )</th>
+							<td>1 serving Muesli with Raspberries</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(95 calories)</th>
+							<td>1 medium apple</td>
+							</tr>
+							<tr>
+							<th>Lunch<br>(325 calories)</th>
+							<td>1 serving Veggie & Hummus Sandwich </td>
+							</tr>
+							<tr>
+							<th>Snack<br>(77 calories)</th>
+							<td>1 hard-boiled egg</td>
+							</tr>
+							<tr>
+							<th>Dinner<br>(405 calories)</th>
+							<td>1 serving Curried Sweet Potato & Peanut Soup + 1 (1-in.) slice whole-wheat baguette </td>
+							</tr>
+						
+							<tr>
+							<th colspan="2">Sunday</th>
+							</tr>
+								<tr>
+							<th >Breakfast<br>(285 calories)</th>
+							<td>1 serving "Egg in a Hole" Peppers with Avocado Salsa</td>
+							</tr>
+							<tr>
+							<th>Lunch<br>(345 calories)</th>
+							<td>1 serving Curried Sweet Potato & Peanut Soup</td>
+							</tr>
+							<tr>
+							<th>Snack<br>(220 calories)</th>
+							<td>1 cup raspberries + 1 oz. dark chocolate</td>
+							</tr>
+							<tr>
+							<th>Dinner<br>(371 calories)</th>
+							<td>1 serving Spinach & Artichoke Dip Pasta</td>
+							</tr>
+								</table>
+												
+										</div>
+								</div>
+						</div>
 				</div> <!-- end of diet plant page -->
+
+				<!-- BMI Calculator Page -->
 				<div class="BMI-page" id="BMI">
 						
+						<!-- controls -->
+						<h2>BMI Calculator</h2>
+						<div class="controls">
+								<div class="calc-ui" id="metric-sys">
+										<h3>Metric System</h3>
+										<h4>Height (cm): </h4>
+										<input type="number" name="heightm" id="heightm">
+										<h4>Weight (kg): </h4>
+										<input type="number" name="weightm" id="weightm">
+										<button id="computeM" onclick="computeMetric()">Compute</button>
+								</div>
+								<div class="calc-ui" id="english-sys">
+										<h3>English System</h3>
+										<h4>Height (inches): </h4>
+										<input type="number" name="heighte" id="heighte" >
+										<h4>Weight (lbs): </h4>
+										<input type="number" name="weighte" id="weighte">
+										<button id="computeE" onclick="computeEnglish()">Compute</button>
+								</div>
+						</div>
+						<div class="result-box">
+								<h5>Note: </h5> <p>The result of this BMI calculator is not accurate because of factors such as age, gender, and many more that can affect one's BMI.</p>
+								<div class="results">
+										<p>Your BMI is <span id="bmi">__</span> this number belongs to <span id="cat">__</span> category in BMI Interpretation. <br>We recommend you our <span id="plan">__</span> but we encourage you to seek specialist for proper guidance and safety.</p>
+								</div>
+						</div>
 				</div> <!-- end of BMI Calculator -->
+				
+				<!-- About and Contact page -->
 				<div class="about-page" id="about">
 						
-				</div> <!-- end of about page -->
+						<!-- URSB image -->
+						<div class="about-container">
+								<div class="bg-img">
+										<h1>ABOUT US</h1>
+								</div>
+								
+								<!-- contact us div -->
+								<div class="contacts">
+										<h2>Contact us :</h2>
+										<br>
+										<h3>University of Rizal System Binangonan</h3>
+										<h6>School</h6>
+										<h4>College of Computer Studies</h5>
+										<h6>College</h6>
+										<h3>Jayson Daluyon</h3>
+										<h6>Subject Professor</h6>
+										
+										<ul type="none">
+												<li><i class="fab fa-facebook"></i> www.facebook.com/Work-Fit/</li>
+												<li><i class="fab fa-twitter"></i> @Work&Fit</li>
+												<li><i class="fas fa-envelope"></i> WorkandFit@yahoo.com</li>
+												<li><i class="fas fa-phone"></i> 0912-3456-789</li>
+										</ul>
+										
+								</div>
+								
+								<div class="about-content">
+										<h3>About our page</h3>
+										<p><i class="fas fa-quote-left"></i> This website was developed by Group 4 of BSIT 2-2 batch 2021, we selected the theme of Workout and fitness guide. Added diet plan and BMI calculator as additional features of the website. We do not claim any image or material that had been use to illustrate workouts and diet plans. BMI interpretation is based on USA CDC growth chart. <i class="fas fa-quote-right"></i></p>
+										<a class="devbtn" href="#devs">See Developers</a>
+			           <div class="devs" id="devs">
+			           		<div class="devs-content">
+			           		 <a class="closedev" href="#">Click to Close</a>
+			           		<div class="albus">
+			           				<img src="images/assets/albus.png" alt="albus" />
+			           				<h3>John Abby Albus</h3>
+			           		</div>
+			           		
+			           		<div class="almoradie">
+			           				<img src="images/assets/almoradie.jpg" alt="almoradie" />
+			           				<h3>Aldrin John Almoradie</h3>
+			           		</div>
+			           		
+			           		<div class="delarosa">
+			           				<img src="images/assets/delarosa.jpg" alt="delarosa" />
+			           				<h3>Benjj Alfred Dela Rosa</h3>
+			           		</div>
+			           		
+			           		<div class="ducay">
+			           				<img src="images/assets/ducay.jpg" alt="ducay" />
+			           				<h3>Aaron Roger Ducay</h3>
+			           		</div>
+			           		
+			           		<div class="relles">
+			           				<img src="images/assets/relles.jpg" alt="relles" />
+			           				<h3>Mark Jonel Relles</h3>
+			           		</div>
+			           		</div>
+			           </div>
+										<h3>Fair use Disclaimer</h3>
+										<p>This website was built for educational purposes only, the developers does not claim or own any of the images or health related materials that had been use in the website.<br>Copyright Disclaimer under Section 107 of the copyright act 1976, allowance is made for fair use for purposes such as criticism, comment, news reporting, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. All the health materials are all used for educating readers on how to do workouts and diet.</p>
+								</div>
+								<div class="ref">
+								 <h2>References</h2>
+								 <ul>
+								 		<li><a href="https://unsplash.com/s/photos/workout">https://unsplash.com/s/photos/workout</a></li>
+								 		<li><a href="https://pixabay.com/">https://pixabay.com/</a></li>
+								 		<li><a href="https://www.lybrate.com/topic/diet-for-underweight">https://www.lybrate.com/topic/diet-for-underweight</a></li>
+								 		<li><a href="https://www.cdc.gov/nccdphp/dnpao/growthcharts/training/bmiage/page5_1.html">https://www.cdc.gov/nccdphp/dnpao/growthcharts/training/bmiage/page5_1.html</a></li>
+								 		<li><a href="https://www.verywellfit.com/an-example-of-a-healthy-balanced-meal-plan-2506647">https://www.verywellfit.com/an-example-of-a-healthy-balanced-meal-plan-2506647</a></li>
+								 		<li><a href="https://www.pexels.com/">https://www.pexels.com/</a></li>
+								 </ul>
+					    	</div>
+						</div>
+						
+						</div> <!-- end of about page -->
+				
 		</div> <!-- end of page container -->
 		
 		

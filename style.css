@@ -4,6 +4,7 @@ body {
 		box-sizing:border-box;
 		background:#DDDDDD;
 		font-family: 'Ubuntu', sans-serif;
+		transition: all 0.5s;
 		animation: openingEffect 0.5s;
 }
 /* header */
@@ -16,15 +17,17 @@ body {
 		align-items: center;
 		width: 90vw;
 		padding:10px;
-		background:#ffffff;
+		background:white;
 		border-radius: 0px 0px 5px 5px;
 		box-shadow: 0 1px 4px #4f4f4f;
 		z-index:3;
+		transition: all 0.5s;
 }
 .page-header a {
 		display:inline-block;
 		text-decoration: none;
-		padding:10px;		
+		padding:10px;
+		background: white;
 		border-radius: 5px;
 		transition: all 0.5s;
 		cursor: pointer;
@@ -43,8 +46,11 @@ body {
 		color: #D65A31;
 }
 .page-header a:hover {
-		background: #e4e4e4;
-		box-shadow:inset 0 0 5px #373737;
+   box-shadow: 0 1px 2px #212121;
+		background: #eeeeee;
+}
+#nmToggle {
+		display: none;
 }
 /* Sidebar */
 .sidebar {
@@ -77,6 +83,7 @@ body {
 .sidebar img {
 		width: 60%;
 		height:33%;
+		border-radius: 10px;
 }
 .sidebar .menubtns {
 		display: flex;
@@ -88,7 +95,7 @@ body {
 		display:block;
 		width: 100%;
 		text-decoration: none;
-		font-size: 2em;
+		font-size: 2.1em;
 		color:#30475E;
 		padding: 10px 0 10px 30%;
 		transition: all 0.5s;
@@ -112,9 +119,7 @@ body {
 .page-container > div:target {
 		animation: openingEffect 1s;
 }
-
 /* Landing page */
-
 .landing-page {
 		background: transparent;
 }
@@ -147,34 +152,556 @@ body {
 .landing-desc p  {
    width: 33%;
 	 text-align: left;
+	 background: #f4f4f4;
+	 box-shadow: 0 2px 2px #2c2c2c;
+	 padding: 25px;
+	 border-radius: 10px;
+	 transition: all 0.5s;
 }
 .landing-desc p span {
    font-size: 1.3rem;
 		font-weight: 600;
-}
-.landing-footer {
-		text-align: center;
-		position: relative;
-		bottom:0;
-		width: 100%;
-		height: 5vh;
-		color: #dddddd;
-		background:#393E46;
-		font-size:0.7em;
-}
-.workout-page {
-		background: green;
-}
-.dietplan-page {
-		background: yellow;
-}
-.BMI-page {
-		background: purple;
-}
-.about-page {
-		background: mintcream;
+		color: #D65A31;
 }
 
+/* Workout page */
+
+.workout-page {
+		background:transparent;
+}
+.modal-controls {
+		display:flex;
+		flex-wrap: wrap;
+		width: 60vw;
+		height: 60vh;
+		background: white;
+		box-shadow: 0 2px 3px #323232;
+		padding:20px 20px 0 20px;
+		margin: 20vh auto;
+		border-radius:3px;
+		transition: all 0.5s;
+}
+.maleBtn, .femaleBtn {
+		display:flex;
+		flex-direction: column;
+		align-items: center;		
+		gap:30px;
+		margin-top: 20px;
+}
+.modal-controls .maleBtn {
+		width: 50%;
+		height: 100%;
+}
+.modal-controls h2 {
+		font-weight: 600;
+}
+.modal-controls .femaleBtn {
+		width: 50%;
+		height: 100%;
+}
+.maleBtn a {
+		display: block;
+		text-align: center;
+		width: 80%;
+		padding:10px;
+		color: white;
+		font-size: 1.2em;
+		background: #30475E;
+		border-radius:3px;
+		box-shadow: 0 1px 2px #393939;
+		font-weight: 400;
+		transition: all 0.5s;
+}
+.femaleBtn a {
+		display: block;
+		text-align: center;
+		width: 80%;
+		padding:10px;
+		color: #30475E;
+		font-size: 1.2em;
+		background: #DDDDDD;
+		border-radius:5px;
+		box-shadow: 0 1px 2px #393939;
+		font-weight: 500;
+		transition: all 0.5s;
+}
+.modal-controls i {
+		display: block;
+		font-size: 7em;
+		color:#F05454 ;
+		filter: drop-shadow(0 1px 2px #4f4f4f);
+}
+.maleBtn a:hover {
+		background: white;
+		color:#30475E;
+}
+.femaleBtn a:hover {
+		background: #30475E;
+		color:white;
+}
+.workout-modal {
+   position: fixed;
+   top:0;
+   display:none;
+		width: 100vw;
+		min-height: 100vh;
+		background: rgba(0,0,0,0.7);
+		z-index:10;
+		animation: openingEffect 0.5s;
+}
+
+.modal-container {
+   position: absolute;
+   top:0;
+   left:10vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+		max-height:100vh;
+		width: 80vw;
+		background: white;
+		border-radius: 5px;
+		padding:25px;
+		overflow: scroll;
+}
+.modal-container .close {
+    position: absolute;
+    top:0;
+    right: 0;
+		font-size:2em;
+		color: #ff5f55;
+		padding:5px;
+		cursor: pointer;
+}
+.modal-container h2 {
+		font-weight: 600;
+}
+.drop-content {
+		margin: 20px;
+}
+.drop-content a {
+   text-decoration: none;
+		display: block;
+		width: 70vw;
+		padding:5px;
+		border-radius:3px;
+		box-shadow:0 1px 2px #3a3a3a;
+		background:#222831;
+		color: white;
+		font-size: 1.5em;
+		font-weight:600;
+		text-align: center;
+}
+.hidden-content {
+		width: 70vw;
+		max-height:50vh;
+		background: #dddddd;
+		box-shadow: 0 1px 2px #3f3f3f;
+		padding:20px;
+		display:flex;
+		flex-wrap: wrap;
+		gap:15px;
+		overflow: scroll;
+}
+
+.hidden-content p, img {
+		width: 48%;
+}
+.hidden-content img {
+		height: 35vh;
+}
+.hidden-content p {
+		padding:10px;
+		font-size:1.2rem;
+		font-weight: 400;
+}
+.hidden-content span {
+		font-size: 1.5rem;
+		font-weight: bold;
+		padding:3px;
+}
+
+.workout-page > div:target {
+		display: block;
+}
+
+/* dietplan page */
+
+.dietplan-page {
+		padding-top: 15vh;
+		padding-bottom: 10vh;
+		background: transparent;
+}
+.averageDiet, .overweightDiet, .underweightDiet {
+		width: 80%;
+		height: auto;
+		padding: 30px;
+		background: #eeeeee;
+		box-shadow: 0 2px 2px #424242;
+		margin:20px auto;
+		border-radius: 5px;
+}
+
+.dietplan-page > div h2 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		padding: 5px;
+		color: #D65A31;
+}
+.dietplan-page > div p {
+   font-size: 1.2rem;
+		padding: 20px;
+}
+.dietplan-page > div h3 {
+		font-weight: 600;
+		font-size: 1.3rem;
+		color:#ff8955;
+}
+.dietplan-page .show {
+		display: block;
+		margin: 0 auto;
+		width: 23%;
+		text-align: center;
+		padding: 20px;
+		text-decoration: none;
+		font-size: 1.3rem;
+		font-weight: bold;
+		color:white;
+		background: #222831 ;
+		box-shadow: 0 2px 2px #424242;
+		border-radius: 3px;
+		transition: color, background 0.5s;
+}
+.dietplan-page .show:hover {
+		color:#222831 ;
+		background: #DDDDDD;
+}
+
+.modal-diet {
+   display:none;
+		position: fixed;
+		top:0;
+		left:0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0,0,0,0.8);
+		z-index:2;
+}
+.modal-diet-content {
+		width: 90%;
+		height: 80%;
+		margin: 15vh auto;
+		background: #dddddd;
+		border-radius: 10px;
+}
+
+.modal-diet-content a {
+		display: block;
+		width: 100%;
+		margin:0;
+		background: #F05454;
+		text-decoration: none;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: #282828;
+		text-align: center;
+}
+.diet-tbl {
+		width: 100%;
+		height: 90%;
+		overflow: scroll;
+		padding: 10px;
+		box-shadow: 0 1px 1px #2a2a2a;
+}
+.diet-tbl table {
+		margin: 0 auto;
+}
+.diet-tbl table, th, tr, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding:10px;
+		text-align: center;
+		background:white;
+		font-size: 1.2rem;
+}
+.diet-tbl table td {
+		width: 75%;
+}
+.modal-diet:target {
+		display:block;
+		animation: openingEffect 0.5s;
+}
+
+/*  BMI calculator*/
+
+.BMI-page {
+		background:transparent;
+}
+.BMI-page h2 {
+		text-align: center;
+		font-weight: 600;
+		margin-top:20vh;
+		margin-bottom: 10vh;
+}
+.BMI-page .controls {
+		height: 70vh;
+		width: 80vw;
+		margin:10vh auto;
+		margin-bottom: 20vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap:20px;
+		
+}
+.BMI-page .controls .calc-ui {
+   background: #D4ECDD;
+		height: 100%;
+		width: 48%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap:15px;
+		padding:20px;
+		box-shadow: -5px 4px 3px #6d6d6d;
+		border-radius: 10px 5px 10px 10px;
+}
+.calc-ui input[type=number] {
+		width: 80%;
+		padding:10px;
+		background: white;
+		text-align: center;
+		border:0;
+		border-radius: 5px 5px 0 0;
+		border-bottom: 3px solid #345B63;
+		box-shadow: inset 0 0 5px #888888;
+}
+.calc-ui input[type=number]:focus {
+		outline-style: none;
+}
+.calc-ui h4 {
+		width: 80%;
+		color:#112031;
+		font-size: 1.5rem;
+		font-weight: 400;
+}
+.calc-ui h3 {
+		width: 80%;
+		color: #152D35;
+		text-align: center;
+		font-size: 1.7rem;
+		font-weight: 600;
+}
+.calc-ui button {
+		width: 50%;
+		padding:10px;
+		color: white;
+		font-weight: 400;
+		font-size: 1.4rem;
+		border:none;
+		background: #345B63;
+		box-shadow: 0 1px 2px #353535;
+		transition: all 0.5s;
+}
+.calc-ui button:hover {
+		border:3px solid #345B63;
+		background: white;
+		color: #345B63;
+}
+.result-box {
+		width: 80%;
+		height: auto;
+		padding:30px;
+		margin: 20vh auto;
+		background: white;
+		box-shadow: 0 2px 2px #737373;
+		border-radius: 10px;
+}
+.result-box p {
+		font-size:1.5rem;
+}
+.results span {
+		font-weight: bold;
+		color:#D65A31;
+}
+
+/* About and contact */
+
+.about-page {
+		background: transparent;
+   padding:0;
+}
+.about-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap:30px;
+		height: 100%;
+		width: 100%;
+}
+.about-container .bg-img {
+   margin:12vh 0 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+		width: 100%;
+		height: 50%;
+		background: url("images/assets/URSB.jpg") no-repeat center center;
+		background-size: cover;
+		box-shadow: 0 1px 3px #313131;
+}
+.bg-img h1 {
+		color:white;
+		font-weight: 900;
+		text-shadow: 0 0 30px #1f1f1f;
+}
+.contacts {
+		min-height: 60%;
+		width: 40%;
+		background: #222831;
+		color:#eeeeee;
+		box-shadow: 0 1px 1px #313131;
+		border-radius: 2px;
+		padding:10px;
+}
+.contacts h3, h4, h6 {
+		text-align: center;
+}
+.contacts h2 {
+	font-weight: 600;
+	text-align: center;
+}
+.contacts ul {
+		padding-left: 20%;
+		padding-top: 5%;
+}
+
+.contacts li {
+		font-size: 1.3rem;
+		font-weight: 600;
+		margin-bottom: 5%;
+		word-break: break-word;
+}
+.contacts ul i {
+		font-size: 2rem;
+		padding: 10px;
+}
+.about-content {
+		min-height: 40%;
+		width: 55%;
+		padding:20px;
+		background: white;
+		box-shadow: 0 1px 1px #313131;
+		border-radius: 5px;
+}
+.about-content h3 {
+		font-weight: 600;
+		color: #ff892b;
+		margin:5%;
+		text-align: center;
+}
+.about-content p {
+		font-weight: 300;
+		font-size: 1.4;
+		word-break: break-word;
+		text-align: justify;
+		padding: 0 10%;
+}
+.devbtn {
+		text-decoration: none;
+		margin: 5vh auto;
+		display: block;
+		padding: 15px;
+		width: 30%;
+		font-size: 1.3rem;
+		box-shadow: 0 2px 2px #494949;
+		text-align: center;
+		background: #30475E;
+		color: white;
+		transition: all 0.5s;
+}
+.devbtn:hover {
+		background: white;
+		color: #30475E;
+}
+
+.devs {
+   display: none;
+		position: fixed;
+		top:0;
+		left:0;
+		height: 100vh;
+		width:100vw;
+		background: rgba(0,0,0,0.8);
+		z-index:4;
+		animation: openingEffect 0.5s;
+}
+.devs-content {
+		height: 80%;
+		width: 80%;
+		background: #eeeeee;
+		position: absolute;
+		top:10%;
+		left:10%;
+		overflow: scroll;
+		display: flex;
+		flex-wrap: wrap;
+		gap:10px;
+		justify-content: center;
+}
+.closedev {
+		display: block;
+		position: sticky;
+		top: 0;
+		width: 100%;
+		margin:0;
+		background: #F05454;
+		text-decoration: none;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: #282828;
+		text-align: center;
+}
+.devs:target {
+		display: block;
+}
+.devs-content > div {
+		width: 35vw;
+		height: auto;
+		border: 7px solid #1eb698;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50px;
+		background: white;
+		box-shadow: 0 0 3px #121212;
+}
+.devs-content img {
+		height: 300px;
+		width: 250px;
+}
+.devs-content h3 {
+		color: #121337;
+}
+
+.ref {
+		width: 40%;
+		min-height:20vh;
+		background: white;
+		border: 2px solid black;
+		padding: 20px 30px 10px 30px;
+		word-break: break-word;
+}
+.ref h2 {
+		font-weight: 600;
+		color: #ff892b;
+		text-align: center;
+}
+.ref a {
+		font-size: 1.4rem;
+}
 
 /* Opening animation */
 @keyframes openingEffect {
@@ -185,12 +712,21 @@ body {
 				opacity: 1;
 		}
 }
-@media (max-width: 720px) {
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .page-header h2 {
+       font-size: 1rem;
+    }
+    .page-header i {
+    		font-size: 1rem;
+    		margin: 5px;
+    }
 		.sidebar {
 				width: 80vw;
 		}
 		.menubtns a{
-				font-size:1.3em;
+				font-size:2em;
 		}
 		.landing-desc {
 				flex-direction: column;
@@ -198,4 +734,74 @@ body {
 		.landing-desc p {
 				width: 100%;
 		}
+		.modal-controls {
+				flex-direction: column;
+				flex-wrap: nowrap;
+				align-items: center;
+				padding-bottom: 20px;
+				width: 80vw;
+				height: auto;
+				gap:20px;
+		}
+		.maleBtn, .femaleBtn {
+				width: 100%;
+				height: auto;
+		}
+		.modal-controls h2 {
+		    width: 50vw;
+				font-size: 1.5em;
+				text-align: center;
+		}
+		.maleBtn a, .femaleBtn a{
+				width: 50vw;
+				font-size: 1em;
+				font-weight: normal;
+		}
+		.hidden-content {
+				flex-direction: column;
+				flex-wrap: nowrap;
+		}
+		.hidden-content img, .hidden-content p {
+				width: 100%;
+		}
+		.hidden-content p {
+				font-size: 1rem;
+				font-weight: normal;
+		}
+		.modal-content h2 {
+				font-weight: normal;
+		}
+		.dietplan-page .show {
+				width: 75%;
+		}
+		.BMI-page .controls {
+				flex-direction: column;
+		}
+		.BMI-page .controls .calc-ui {
+				width: 100%;
+		}
+    .contacts {
+    		width: 90%;
+    		text-align: center;
+    }
+    .contacts ul {
+    		padding-left: 10px;
+    }
+    .contacts li {
+    		font-size: 1.5rem;
+		   font-weight: 400;
+    }
+    .about-content {
+    		width: 90%;
+    }
+    .ref {
+    		width: 90%;
+    }
+    .devbtn {
+    		width: 70%;
+    }
+    .devs-content img {
+    		height: 30vh;
+		   width: 25vw;
+    }
 }
